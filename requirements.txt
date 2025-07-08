@@ -1,12 +1,28 @@
+# ETJCA Cloud Agent - Dependencies Optimized for Railway
+# Versione corretta senza dipendenze pesanti
+
+# Core Flask
 flask==2.3.3
-psycopg2-binary==2.9.7
-selenium==4.15.2
-pandas==2.1.1
-beautifulsoup4==4.12.2
-requests==2.31.0
-openpyxl==3.1.2
-lxml==4.9.3
-webdriver-manager==4.0.1
-schedule==1.2.0
-python-dotenv==1.0.0
 gunicorn==21.2.0
+
+# Database
+psycopg2-binary==2.9.7
+
+# Data Processing (versioni leggere)
+pandas==2.1.1
+
+# HTTP Requests
+requests==2.31.0
+
+# Environment
+python-dotenv==1.0.0
+
+# Optional: Excel export (se necessario)
+openpyxl==3.1.2
+
+# Removed heavy dependencies:
+# - selenium (troppo pesante per Railway)
+# - webdriver-manager (non necessario)
+# - beautifulsoup4 (per ora non usato)
+# - lxml (dipendenza pesante)
+# - schedule (implementato diversamente)
